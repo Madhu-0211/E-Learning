@@ -1,0 +1,71 @@
+<div id="app">
+  <nav class="navbar navbar-expand navbar-dark" style="background-color:#6f42c1;">
+    
+    <ul class="navbar-nav mr-auto" routerLinkActive="active">
+      <li class="nav-item" *ngIf="showAdmin">
+        <a href="/course" class="nav-link" *ngIf="isLoggedIn" routerLink="course">Courses</a>
+      </li>
+      <li class="nav-item" *ngIf="showAdmin">
+        <a href="students" class="nav-link" routerLink="students">Students</a>
+      </li>
+      <li class="nav-item dropdown" *ngIf="showAdmin">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+        aria-expanded="false"
+        >Manage Professors
+      </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <li><a class="dropdown-item" href="/professor" routerlink="professor">Professor List</a></li>
+        <div class="dropdown-divider"></div>
+        <li><a class="dropdown-item" href="/professorrequest" routerlink="professorrequest" >Professor Request</a></li>
+        </ul>
+    </li>
+    <li class="nav-item" *ngIf="showProfessor">
+      
+      <a class="nav-link" href="/course" routerlink="course">Courses</a></li>
+      <li class="nav-item " *ngIf="showProfessor">
+      <a class="nav-link" href="/addcourse" routerlink="addcourse" >Add Course</a></li>
+      
+  
+      <li class="nav-item" *ngIf="showStudent">
+        <a href="/course" class="nav-link" *ngIf="isLoggedIn" routerLink="course">Courses</a>
+        </li>
+        <li class="nav-item" *ngIf="showStudent">
+          <a class="nav-link" *ngIf="isLoggedIn" href="/professor" routerlink="professor">Professor List</a></li>
+        
+
+      
+    </ul>
+
+    <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+      
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+        aria-expanded="false"
+        >Signup
+      </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <li><a class="dropdown-item" href="/register" routerlink="register">As Student</a></li>
+        <div class="dropdown-divider"></div>
+        <li><a class="dropdown-item" href="/professor-signup" routerlink="professor-signup" >As Professor</a></li>
+        </ul>
+    </li>
+      <li class="nav-item">
+        <a href="/login" class="nav-link" routerLink="login">Login</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+      
+      <li class="nav-item">
+        <a href="/profile" class="nav-link" routerLink="profile">Profile</a>
+      </li>
+      <li class="nav-item">
+        <a href class="nav-link" (click)="logout()">LogOut</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+
+<div class= "container">
+        <div *ngFor="let i of d">
+            <div class="card">
+            <div class="row">
+    
+    <div class="col-sm-12">
+    <div class="card-body">
+            <a href="/link/{{i.id}}"><b style="color:#6f42c1;">{{i.course}}</b></a>
+        
+        <div *ngIf="show">
+           <a href="/addlink/{{i.id}}" class='btn' router="addlink">+ Add Material Link</a>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>

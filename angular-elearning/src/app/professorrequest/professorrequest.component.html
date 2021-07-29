@@ -1,0 +1,36 @@
+<div class="container">  
+    <h3 style="text-align:center;color:#6f42c1"><b>Requests</b></h3></div>
+    <div class="container1">
+    <table class="table table-striped">  
+        <thead class="thead" style="background-color:#b594f3">  
+            <tr>  
+              <th>ID</th> 
+          <th>Name</th>  
+          <th>Phone Number</th> 
+
+          <th>Specilization</th> 
+          <th>Experience</th> 
+          <th>Request</th>
+        
+        </tr>  
+    </thead>  
+    <tbody>
+         <tr *ngFor="let i of d">
+            <ng-container *ngIf="i.status==0">
+          <td>{{ i.id }}</td>
+          <td>{{ i.username }}</td>
+          <td>{{ i.phonenumber }}</td>
+          <td>{{ i.specialization }}</td>
+          <td>{{ i.experience }}</td>
+           <td>
+            <button (click)=acceptRequest(i.id) class="btn "style="background-color:#b594f3" >Accept</button>&nbsp;
+            <button (click)=rejectRequest(i.id) class="btn btn-dark" >Delete</button>&nbsp;
+            
+          </td>
+          </ng-container>
+        </tr> 
+      </tbody>
+    </table>
+  
+</div>  
+

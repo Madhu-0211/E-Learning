@@ -1,0 +1,32 @@
+<div class="card">
+<div class="row">
+    <div class="col-sm-12">
+    <div class="card-body">
+      
+    <form
+          
+          name="form"
+          (ngSubmit)="f.form.valid && onSubmit()"
+          #f="ngForm"
+          novalidate
+        >
+          <div class="form-group">
+            <label for="course" style="color:#6f42c1"><b>Add New Course</b></label>
+            <input
+              type="text"
+              placeholder="Enter Course name"
+              class="form-control"
+              name="coursename"
+              [(ngModel)]="form.coursename"
+              required
+              #coursename="ngModel"
+            />
+            </div>
+            <div class="form-group text-center">
+                <button class="btn btn-primary btn">Add</button>
+              </div>
+            </form>
+            </div>
+            </div>
+            </div>
+            </div>

@@ -1,0 +1,32 @@
+<div class="card">
+<div class="row">
+    <div class="col-sm-12">
+    <div class="card-body">
+      
+    <form
+          
+          name="form"
+          (ngSubmit)="f.form.valid && onSubmit()"
+          #f="ngForm"
+          novalidate
+        >
+          <div class="form-group">
+            <label for="link" style="color:#6f42c1"><b>Add url link</b></label>
+            <input
+              type="text"
+              
+              class="form-control"
+              name="link"
+              [(ngModel)]="form.link"
+              required
+              #coursename="ngModel"
+            />
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary btn-block">Add</button>
+              </div>
+            </form>
+            </div>
+            </div>
+            </div>
+            </div>

@@ -1,0 +1,22 @@
+.card
+{
+    top:50px;
+    margin:auto;
+    width:60%;
+    height:600px;
+    border-color: #6f42c1;
+}
+.card-body
+{
+    top:50px;
+    margin:auto;
+    width:70%;
+    height:500px;
+}
+.btn
+{
+    border: none;
+    padding: 12px 40px;
+    background-color:#6f42c1;
+    color:white;
+}
